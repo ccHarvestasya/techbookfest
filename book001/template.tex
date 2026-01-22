@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,b5paper]{article}
 
 % --- 日本語（LuaLaTeX） ---
 \usepackage{luatexja}
@@ -8,9 +8,13 @@
 \setmonofont{Noto Sans Mono CJK JP}
 
 % --- レイアウト ---
-\usepackage[a4paper,margin=25mm]{geometry}
+$if(margin)$
+\usepackage[margin=$margin$]{geometry}
+$else$
+\usepackage[margin=15mm]{geometry}
+$endif$
 \usepackage{setspace}
-\setstretch{1.12}
+\setstretch{1.20}
 
 % --- 画像/リンク ---
 \usepackage{graphicx}

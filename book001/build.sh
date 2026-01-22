@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+MARGIN=${MARGIN:-20mm}
+
 pandoc book.md \
   -s \
   -f markdown+raw_tex \
@@ -12,6 +14,5 @@ pandoc book.md \
   --number-sections \
   --no-highlight \
   --pdf-engine=lualatex \
-  -V papersize=b5 \
-  -V geometry:margin=20mm \
+  -V margin=$MARGIN \
   -o book.pdf
